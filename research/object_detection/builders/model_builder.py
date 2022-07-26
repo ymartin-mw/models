@@ -58,6 +58,7 @@ if tf_version.is_tf2():
   from object_detection.models import center_net_resnet_feature_extractor
   from object_detection.models import center_net_resnet_v1_fpn_feature_extractor
   from object_detection.models import faster_rcnn_inception_resnet_v2_keras_feature_extractor as frcnn_inc_res_keras
+  from object_detection.models import faster_rcnn_inception_resnet_v2_feature_extractor as frcnn_inc_res
   from object_detection.models import faster_rcnn_resnet_keras_feature_extractor as frcnn_resnet_keras
   from object_detection.models import ssd_resnet_v1_fpn_keras_feature_extractor as ssd_resnet_v1_fpn_keras
   from object_detection.models import faster_rcnn_resnet_v1_fpn_keras_feature_extractor as frcnn_resnet_fpn_keras
@@ -143,6 +144,8 @@ if tf_version.is_tf2():
           frcnn_resnet_fpn_keras.FasterRCNNResnet101FpnKerasFeatureExtractor,
       'faster_rcnn_resnet152_fpn_keras':
           frcnn_resnet_fpn_keras.FasterRCNNResnet152FpnKerasFeatureExtractor,
+          'faster_rcnn_inception_resnet_v2':
+      frcnn_inc_res.FasterRCNNInceptionResnetV2FeatureExtractor,
   }
 
   CENTER_NET_EXTRACTOR_FUNCTION_MAP = {
